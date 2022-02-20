@@ -256,7 +256,7 @@ public class AuthEventHandler {
         for (int x = minBlockPos.getX(); x <= maxBlockPos.getX(); x++) {
             for (int y = minBlockPos.getY(); y <= maxBlockPos.getY(); y++) {
                 for (int z = minBlockPos.getZ(); z <= maxBlockPos.getZ(); z++) {
-                    if (player.getWorld().getBlockState(new BlockPos(x, y, z)).getBlock().equals(Blocks.NETHER_PORTAL)) {
+                    if (player.getServerWorld().getBlockState(new BlockPos(x, y, z)).getBlock().equals(Blocks.NETHER_PORTAL)) {
                         return new BlockPos(x, y, z);
                     }
                 }
